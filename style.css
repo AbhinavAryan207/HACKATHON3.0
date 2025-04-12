@@ -1,0 +1,275 @@
+/* GLOBAL STYLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Kumbh Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #111;
+}
+
+/* NAVBAR */
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #000;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+#navbar-logo {
+    color: rgb(151, 220, 13);
+    cursor: pointer;
+    font-size: 40px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar_menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.navbar_item {
+    height: 80px;
+}
+
+.navbar_link {
+    color: #fff;
+    text-decoration: none;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.navbar_link:hover {
+    color: rgb(151, 220, 13);
+    transition: color 0.3s ease;
+}
+
+.navbar_btn.desktop {
+    display: flex;
+    align-items: center;
+}
+
+.navbar_btn.mobile {
+    display: none;
+}
+
+.button {
+    background: #1831d2;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #47e00a;
+    transition: background 0.3s ease;
+}
+
+.navbar_toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    position: absolute;
+    top: 26px;
+    right: 30px;
+    cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+    margin-top: 100px;
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(120deg, #1e1e1e, #000);
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.hero .button.primary {
+    font-size: 20px;
+    background-color: #47e00a;
+    padding: 12px 30px;
+    border-radius: 12px;
+}
+
+.hero .button.primary:hover {
+    background-color: #38a10c;
+}
+
+/* SERVICES SECTION */
+.services {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.service_card {
+    background-color: #f1f1f1;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service_card:hover {
+    transform: translateY(-10px);
+}
+
+.service_card i {
+    font-size: 2.5rem;
+    color: #1831d2;
+    margin-bottom: 15px;
+}
+
+.service_card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* TESTIMONIAL SECTION */
+.testimonials {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #e9f3e6;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.testimonial_card {
+    background-color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial_card p {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.testimonial_card h4 {
+    font-weight: bold;
+    color: #333;
+}
+
+/* FOOTER */
+footer {
+    background-color: #111;
+    color: #ccc;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer__container p {
+    margin-bottom: 10px;
+}
+
+.socials a {
+    color: #ccc;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.socials a:hover {
+    color: #47e00a;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 968px) {
+    .navbar_menu {
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        flex-direction: column;
+        align-items: center;
+        background-color: #000;
+        transition: left 0.3s ease;
+    }
+
+    .navbar_menu.active {
+        left: 0;
+    }
+
+    .navbar_item.mobile {
+        display: flex;
+    }
+
+    .navbar_btn.desktop {
+        display: none;
+    }
+
+    .navbar_toggle {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .services h2,
+    .testimonials h2 {
+        font-size: 2rem;
+    }
+
+    .button {
+        font-size: 16px;
+    }
+}

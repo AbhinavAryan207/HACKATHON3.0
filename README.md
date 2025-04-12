@@ -16,5 +16,15 @@ Z. Al—Povzerecl is an AI-powered personalized career guidance platform built t
 ---
 
 ## 📂 Project Structure
+z_al_povzerecl/
+│
+├── app/
+│   ├── main.py              # FastAPI app entry point
+│   ├── models.py            # Pydantic models
+│   ├── recommender.py       # AI/ML recommendation logic
+│   ├── database.py          # (optional) DB setup if needed
+│   └── utils.py             # helper functions
+├── requirements.txt
+└── README.md
 
 
